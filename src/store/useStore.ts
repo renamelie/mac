@@ -1,8 +1,13 @@
-import { create } from "zustand";
-import createCommonSlice from "./slices/commonSlice";
+import { create } from 'zustand'
+import createCommonSlice from './slices/commonSlice'
 
-const useStore = create<any>()((...a) => ({
-  ...createCommonSlice(...a),
-}));
+export interface ICommon {
+	language: string
+	setLanguage: (value: string) => void
+}
 
-export default useStore;
+const useStore = create<ICommon>()((...a) => ({
+	...createCommonSlice(...a),
+}))
+
+export default useStore

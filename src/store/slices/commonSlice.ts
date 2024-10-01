@@ -8,7 +8,7 @@ export interface ICommon {
 	setLanguage: (value: string) => void
 }
 
-const createCommonSlice: StateCreator<ICommon> = (set, get) => ({
+const createCommonSlice: StateCreator<ICommon> = set => ({
 	language: currentLanguage,
 	setLanguage(value) {
 		set(state => ({ ...state, language: value }))

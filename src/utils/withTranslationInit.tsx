@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import i18n from '../i18n'
 
 export const withTranslationInit = (WrappedComponent: React.ComponentType) => {
-	return function WithTranslationInit(props: any) {
+	return function WithTranslationInit(props: React.JSX.IntrinsicAttributes) {
 		const [isInitialized, setIsInitialized] = useState(false)
 
 		useEffect(() => {
